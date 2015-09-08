@@ -26,6 +26,7 @@ guard :minitest do
   # watch(%r{^lib/(.+)\.rb$})         { |m| "spec/#{m[1]}_spec.rb" }
   # watch(%r{^spec/spec_helper\.rb$}) { 'spec' }
 
+
    # Rails 4
   watch(%r{^app/(.+)\.rb$})                               { |m| "test/#{m[1]}_test.rb" }
   watch(%r{^app/controllers/application_controller\.rb$}) { 'test/controllers' }

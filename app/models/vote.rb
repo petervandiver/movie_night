@@ -1,5 +1,6 @@
 class Vote < ActiveRecord::Base
 
+validates :person, presence: true
 validates :title, presence: true
 	validates :location, presence: true
 

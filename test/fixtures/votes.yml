@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  location: MyString
+  person: "Hot Carl"
+  title: "Dude Where's My Car?"
+  location: "Doug's Mom's Couch"
 
 two:
-  title: MyString
-  location: MyString
+  person: "Ugene"
+  title: "Coneheads"
+  location: "Steve's Garage"

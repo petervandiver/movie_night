@@ -13,6 +13,9 @@ class EventTest < ActiveSupport::TestCase
 		assert @event.valid?
 	end
 
+	should have_many(:movies)
+	should have_many(:votes)
+
 	should validate_presence_of(:occurs_at)
 	should validate_presence_of(:location)
 
@@ -20,5 +23,9 @@ class EventTest < ActiveSupport::TestCase
     scoped_to(:occurs_at).
     with_message('already an event scheduled there at that time').
     case_insensitive
+
+    test 'event has a winning movie' do
+    assert_equal @event.winning_movie, movies(:Coneheads)
+  end
 
 end

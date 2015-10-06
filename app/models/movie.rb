@@ -1,7 +1,19 @@
 class Movie < ActiveRecord::Base
 
-	validates :title, presence: true
+	belongs_to :event
+	has_many :votes
+
+	validates :event, presence: true
 	validates :url, presence: true
 
+	validates :title, presence: true,
+                    uniqueness: {
+                      scope: :event_id,
+                      case_sensitive: false,
+                      message: 'already suggested for that event'
+                    }
 
+  def vote(person)
+    Vote.create(movie: self, event: event, person: person)
+  end
 end

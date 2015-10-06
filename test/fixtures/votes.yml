@@ -9,3 +9,8 @@ two:
   person: "Ugene"
   title: "Coneheads"
   location: "Steve's Garage"
+
+three:
+  person: "Cleg"
+  title: "Coneheads"
+  location: "Steve's Garage"

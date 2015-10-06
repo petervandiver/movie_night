@@ -13,6 +13,9 @@ def setup
     assert @vote.valid?
   end
 
+should belong_to(:event)
+should belong_to(:movie)
+
 should validate_presence_of(:person)
 should validate_presence_of(:title)
 should validate_presence_of(:location)

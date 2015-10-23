@@ -1,16 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  person: "Hot Carl"
-  title: "Dude Where's My Car?"
-  location: "Doug's Mom's Couch"
+  movie: "Dude Where's My Car?"
+  event: february
 
 two:
-  person: "Ugene"
-  title: "Coneheads"
-  location: "Steve's Garage"
+  movie: "coneheads"
+  event: january
 
 three:
-  person: "Cleg"
-  title: "Coneheads"
-  location: "Steve's Garage"
+  movie: "coneheads"
+  event: january

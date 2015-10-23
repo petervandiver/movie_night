@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: "MyString"
+Dude Where's My Car?:
+  title: "Dude Where's My Car?"
   url: "MyString"
+  event: february
 
-two:
-  title: "MyString"
+coneheads:
+  title: "Coneheads"
   url: "MyString"
+  event: january

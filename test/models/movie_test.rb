@@ -5,7 +5,13 @@ class MovieTest < ActiveSupport::TestCase
   #   assert true
   # end
   
+def setup
+    @movie = movies(:coneheads)
+  end
 
+  test 'has a valid fixture' do
+    assert @movie.valid?
+  end
 
 
   should belong_to(:event)
@@ -21,11 +27,10 @@ class MovieTest < ActiveSupport::TestCase
  
 
 test 'should allow voting' do
-    @movie.vote('Karen')
-    @movie.vote('Mike')
+    @movie.vote
+    @movie.vote
     
-
-    assert_equal @movie.votes.count, 5
+    assert_equal @movie.votes.count, 4
   end
 
 

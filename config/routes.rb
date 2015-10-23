@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :events
-
-  root 'events#index'
-
+  # replace `devise_for :users` with this:
+devise_for :users, :controllers => { registrations: 'registrations' }
   
+resources :events do
+    resources :movies, only: [:create, :destroy] do
+      get 'vote', on: :member
+    end
+  end
+
+
+ root 'events#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

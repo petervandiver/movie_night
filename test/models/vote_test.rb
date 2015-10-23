@@ -6,7 +6,7 @@ class VoteTest < ActiveSupport::TestCase
   # end
 
 def setup
-    @vote = votes(:one)
+    @vote = votes(:three)
   end
 
   test 'has a valid fixture' do
@@ -16,9 +16,8 @@ def setup
 should belong_to(:event)
 should belong_to(:movie)
 
-should validate_presence_of(:person)
-should validate_presence_of(:title)
-should validate_presence_of(:location)
+should validate_presence_of(:movie)
+should validate_presence_of(:event)
 
 
 end

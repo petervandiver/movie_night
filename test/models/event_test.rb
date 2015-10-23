@@ -6,7 +6,7 @@ class EventTest < ActiveSupport::TestCase
   # end
 
 	def setup
-		@event = events(:february)
+		@event = events(:january)
 	end
 
 	test 'has a valid fixture' do
@@ -25,7 +25,7 @@ class EventTest < ActiveSupport::TestCase
     case_insensitive
 
     test 'event has a winning movie' do
-    assert_equal @event.winning_movie, movies(:Coneheads)
+    assert_equal @event.winning_movie, movies(:coneheads)
   end
 
 end
